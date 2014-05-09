@@ -6,6 +6,7 @@
    - the edge-case `res.json(status, num)` requires `res.status(status).json(num)`
  * deprecate `res.jsonp(obj, status)` -- use `res.jsonp(status, obj)` instead
    - the edge-case `res.jsonp(status, num)` requires `res.status(status).jsonp(num)`
+ * proper proxy trust with `app.set('trust proxy', trust)`
  * update connect to 2.15.0
    * Add `res.appendHeader`
    * Call error stack even when response has been sent
