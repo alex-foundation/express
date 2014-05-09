@@ -27,7 +27,7 @@ describe('res', function(){
 
       request(app)
       .get('/')
-      .expect('Content-Type', 'application/vnd.example+json')
+      .expect('Content-Type', 'application/vnd.example+json; charset=utf-8')
       .expect(200, '{"hello":"world"}', done);
     })
 
@@ -42,7 +42,7 @@ describe('res', function(){
         request(app)
         .get('/')
         .end(function(err, res){
-          res.headers.should.have.property('content-type', 'application/json');
+          res.headers.should.have.property('content-type', 'application/json; charset=utf-8');
           res.text.should.equal('null');
           done();
         })
@@ -60,7 +60,7 @@ describe('res', function(){
         request(app)
         .get('/')
         .end(function(err, res){
-          res.headers.should.have.property('content-type', 'application/json');
+          res.headers.should.have.property('content-type', 'application/json; charset=utf-8');
           res.text.should.equal('["foo","bar","baz"]');
           done();
         })
@@ -78,7 +78,7 @@ describe('res', function(){
         request(app)
         .get('/')
         .end(function(err, res){
-          res.headers.should.have.property('content-type', 'application/json');
+          res.headers.should.have.property('content-type', 'application/json; charset=utf-8');
           res.text.should.equal('{"name":"tobi"}');
           done();
         })
@@ -145,7 +145,7 @@ describe('res', function(){
       .get('/')
       .end(function(err, res){
         res.statusCode.should.equal(201);
-        res.headers.should.have.property('content-type', 'application/json');
+        res.headers.should.have.property('content-type', 'application/json; charset=utf-8');
         res.text.should.equal('{"id":1}');
         done();
       })
@@ -164,7 +164,7 @@ describe('res', function(){
       .get('/')
       .end(function(err, res){
         res.statusCode.should.equal(201);
-        res.headers.should.have.property('content-type', 'application/json');
+        res.headers.should.have.property('content-type', 'application/json; charset=utf-8');
         res.text.should.equal('{"id":1}');
         done();
       })

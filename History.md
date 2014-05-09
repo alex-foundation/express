@@ -3,6 +3,7 @@
 
  * include `ETag` header in `HEAD` requests
  * keep previous `Content-Type` for `res.jsonp`
+ * set proper `charset` in `Content-Type` for `res.send`
 
 4.1.2 / 2014-05-08
 ==================
