@@ -1,3 +1,8 @@
+unreleased
+==========
+
+ * fix behavior of multiple `app.VERB` for the same path
+
 4.2.0 / 2014-05-11
 ==================
 
